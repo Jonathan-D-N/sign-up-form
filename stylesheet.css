@@ -2,9 +2,10 @@
     --main-gray: #f9fafb;
     --main-white: #ffffff;
     --text-gray: #5b5b5b;
+    --text-dark: #191919;
     --form-border-color: #E5E7EB;
     --button-color: #596D48;
-    --right-card-height: 32vh;
+    --right-card-height: 33vh;
 }
 
 @font-face {
@@ -15,15 +16,24 @@
     font-style: normal;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
 }
 
 #container {
     display: flex;
-    max-height: 200vh;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .leftSide {
@@ -32,7 +42,7 @@ body {
 }
 
 .leftSide > img {
-    max-height: 100vh;
+    max-height: 100%;
 }
 
 .rightSide {
@@ -40,17 +50,18 @@ body {
     flex-direction: column;
     min-width: 70vw;
     background-color: var(--main-gray);
+    color: var(--text-dark);
 }
 
 .hero {
     background-color: var(--main-gray);
     height: var(--right-card-height);
-    padding-left: 2rem;
+    padding-left: 3rem;
     font-weight: 600;
 }
 
 .heroTextContainer {
-    margin-top: 17vh;
+    margin-top: 16vh;
     max-width: 55ch;
 }
 
@@ -58,9 +69,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--main-white);
-    color: var(--text-gray);
     height: var(--right-card-height);
-    padding-left: 2rem;
+    padding-left: 3rem;
     box-shadow: 0px 15px 10px -15px var(--text-gray);
 }
 
@@ -105,7 +115,18 @@ input {
     background-color: var(--main-gray);
     height: var(--right-card-height);
     margin-top: 2rem;
-    padding-left: 2rem;
+    padding-left: 3rem;
+    font-weight: 550;
+}
+
+a:link {
+    color: #596D48;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
 }
 
 button {
