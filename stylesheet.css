@@ -114,17 +114,21 @@ body {
     box-shadow: 0px 15px 10px -15px var(--text-gray);
 }
 
+.forms > h2 {
+    margin-bottom: 0;
+}
+
 form {
     display: flex;
 }
 
 fieldset {
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-top: 1rem;
     padding-bottom: 0.625rem;
-    padding-left: 0.0em;
-    padding-right: 0.75rem;
+    padding-left: 0.0rem;
+    padding-right: 4rem;
     border: 0;
 }
 
@@ -147,6 +151,14 @@ input {
     border: solid 1px var(--form-border-color);
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
+}
+
+input:focus,
+input:active {
+    outline: none !important;
+    background-color: var(--main-gray);
+    border: 1px solid var(--button-color);
+    box-shadow: 0px 1px 5px -1px var(--text-gray);
 }
 
 .footer {
@@ -196,12 +208,13 @@ button {
     background-color: var(--button-color);
 }
 
-.footerButton::before {
+.footerButton:before {
     content:"→";
     position:absolute;
     color: var(--main-white);
     left: 83%;
     opacity: 0;
+    transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 5.550);
     -webkit-transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 5.550); 
 }
 
