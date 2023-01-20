@@ -180,6 +180,11 @@ a:active {
     text-decoration: underline;
 }
 
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     position: relative;
     display:block;
