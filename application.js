@@ -33,7 +33,6 @@ phoneNumberInputInitial.addEventListener('keyup', phoneInput, false);
 
 function phoneInput(event) {
     let key = event.key;
-    console.log(key)
     let phoneNumberInputLive = document.getElementById('phone_number').value
     if (key != 'Backspace') {
         if (phoneNumberInputLive.length == 3) {
