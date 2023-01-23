@@ -31,11 +31,15 @@ function validatePassword (e) {
 let phoneNumberInputInitial = document.getElementById('phone_number')
 phoneNumberInputInitial.addEventListener('keyup', phoneInput, false);
 
-function phoneInput() {
+function phoneInput(event) {
+    let key = event.key;
+    console.log(key)
     let phoneNumberInputLive = document.getElementById('phone_number').value
-    if (phoneNumberInputLive.length == 3) {
-        phoneNumberInputInitial.value += '-'
-    } else if (phoneNumberInputLive.length == 7) {
-        phoneNumberInputInitial.value += '-'
+    if (key != 'Backspace') {
+        if (phoneNumberInputLive.length == 3) {
+            phoneNumberInputInitial.value += '-'
+        } else if (phoneNumberInputLive.length == 7) {
+            phoneNumberInputInitial.value += '-'
+        }
     }
 }
