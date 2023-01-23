@@ -112,6 +112,16 @@ body {
 /**********************
 FORMS & INPUT
 **********************/
+fieldset {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 0.625rem;
+    padding-left: 0.0rem;
+    padding-right: 4rem;
+    border: 0;
+}
+
 .forms {
     display: flex;
     flex-direction: column;
@@ -131,15 +141,6 @@ FORMS & INPUT
 }
 
 /* removing default browser styling */
-fieldset {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    padding-top: 1rem;
-    padding-bottom: 0.625rem;
-    padding-left: 0.0rem;
-    padding-right: 4rem;
-    border: 0;
-}
 
 input, label {
     display: block;
@@ -191,6 +192,31 @@ input:not(:focus):not(:placeholder-shown):valid {
     content: "Invalid. Use this format: 123-456-7890";
     color: #8b0000;
 }
+
+#user_password:not(:focus), #confirm_password:not(:focus) {
+    appearance: none;
+    min-width: 15rem;
+    background-color: var(--main-white);
+    border: solid 1px var(--form-border-color);
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.confirmValidity {
+    position: absolute;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #8b0000;
+}
+
+/* #confirm_password + span {
+    position: absolute;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: red;
+} */
 
 input:focus,
 input:active {
